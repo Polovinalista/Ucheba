@@ -134,7 +134,11 @@ if __name__ == '__main__':
 ### Создайте два Python файла, в одном будет выполняться вычисление площади треугольника при помощи формулы Герона (необходимо реализовать через функцию), а во втором будет происходить взаимодействие с пользователем (получение всей необходимой информации и вывод результатов).
 
 ```python
-from document import calculate_area
+def calculate_area(a, b, c): 
+    s = (a + b + c) / 2
+    area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
+    return area
+from triangle import calculate_area
 
 def get_user_input():
     a = float(input("Введите длину стороны a: "))
